@@ -1,0 +1,364 @@
+<!DOCTYPE html><html><head>
+      <title>scratch</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/scottschmidt/.vscode/extensions/shd101wyy.markdown-preview-enhanced-0.6.5/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="mlnlpopenai">ml/nlp/openai</h1>
+
+<h2 class="mume-header" id="examples">Examples</h2>
+
+<h3 class="mume-header" id="location">location:</h3>
+
+<ul>
+<li><code>~/scottdev/openai-cookbook/examples</code></li>
+</ul>
+<h2 class="mume-header" id="classification-using-the-embeddingshttplocalhost8889labtreeexamplesss_classification_using_embeddingsipynbclassification-using-the-embeddings">Classification using the embeddings<a href="http://localhost:8889/lab/tree/examples/ss_Classification_using_embeddings.ipynb#Classification-using-the-embeddings"></a></h2>
+
+<p>In the classification task we predict one of the predefined categories given an input. We will predict the score based on the embedding of the review&apos;s text, where the algorithm is correct only if it guesses the exact number of stars. We split the dataset into a training and a testing set for all the following tasks, so we can realistically evaluate performance on unseen data. The dataset is created in the&#xA0;<a href="http://localhost:8889/files/examples/Obtain_dataset.ipynb?_xsrf=2%7C0dcdb1d6%7Cd5ea44109a990393d4f42738c3ac89f1%7C1669661431">Obtain_dataset Notebook</a>.</p>
+<p>In the following example we&apos;re predicting the number of stars in a review, from 1 to 5.</p>
+<h2 class="mume-header" id="clustering-for-transaction-classificationhttplocalhost8889labtreeexamplesss_clustering_for_transaction_classificationipynbclustering-for-transaction-classification">Clustering for Transaction Classification<a href="http://localhost:8889/lab/tree/examples/ss_Clustering_for_transaction_classification.ipynb#Clustering-for-Transaction-Classification"></a></h2>
+
+<p>This notebook covers use cases where your data is unlabelled but has features that can be used to cluster them into meaningful categories. The challenge with clustering is making the features that make those clusters stand out human-readable, and that is where we&apos;ll look to use GPT-3 to generate meaningful cluster descriptions for us. We can then use these to apply labels to a previously unlabelled dataset.</p>
+<p>To feed the model we use embeddings created using the approach displayed in the notebook&#xA0;<a href="http://localhost:8889/files/examples/Multiclass_classification_for_transactions.ipynb?_xsrf=2%7C0dcdb1d6%7Cd5ea44109a990393d4f42738c3ac89f1%7C1669661431">Multiclass classification for transactions Notebook</a>, applied to the full 359 transactions in the dataset to give us a bigger pool for learning</p>
+<h2 class="mume-header" id="clusteringhttplocalhost8889labtreeexamplesss_clusteringipynbclustering">Clustering<a href="http://localhost:8889/lab/tree/examples/ss_Clustering.ipynb#Clustering"></a></h2>
+
+<p>We use a simple k-means algorithm to demonstrate how clustering can be done. Clustering can help discover valuable, hidden groupings within the data. The dataset is created in the&#xA0;<a href="http://localhost:8889/files/examples/Obtain_dataset.ipynb?_xsrf=2%7C0dcdb1d6%7Cd5ea44109a990393d4f42738c3ac89f1%7C1669661431">Obtain_dataset Notebook</a>.</p>
+<h2 class="mume-header" id="code-searchhttplocalhost8889labtreeexamplesss_code_searchipynbcode-search">Code search<a href="http://localhost:8889/lab/tree/examples/ss_Code_search.ipynb#Code-search"></a></h2>
+
+<p>We index our own&#xA0;<a href="https://github.com/openai/openai-python">openai-python code repository</a>, and show how it can be searched. We implement a simple version of file parsing and extracting of functions from python files.</p>
+<h2 class="mume-header" id="customizing-embeddingshttplocalhost8889labtreeexamplesss_customizing_embeddingsipynbcustomizing-embeddings">Customizing embeddings<a href="http://localhost:8889/lab/tree/examples/ss_Customizing_embeddings.ipynb#Customizing-embeddings"></a></h2>
+
+<p>This notebook demonstrates one way to customize OpenAI embeddings to a particular task.</p>
+<p>The input is training data in the form of [text_1, text_2, label] where label is +1 if the pairs are similar and -1 if the pairs are dissimilar.</p>
+<p>The output is a matrix that you can use to multiply your embeddings. The product of this multiplication is a &apos;custom embedding&apos; that will better emphasize aspects of the text relevant to your use case. In binary classification use cases, we&apos;ve seen error rates drop by as much as 50%.</p>
+<p>In the following example, I use 1,000 sentence pairs picked from the SNLI corpus. Each pair of sentences are logically entailed (i.e., one implies the other). These pairs are our positives (label = 1). We generate synthetic negatives by combining sentences from different pairs, which are presumed to not be logically entailed (label = -1).</p>
+<p>For a clustering use case, you can generate positives by creating pairs from texts in the same clusters and generate negatives by creating pairs from sentences in different clusters.</p>
+<p>With other data sets, we have seen decent improvement with as little as ~100 training examples. Of course, performance will be better with more examples.</p>
+<h2 class="mume-header" id="fine-tuning-classification-examplehttplocalhost8889labtreeexamplesss_fine-tuned_classificationipynbfine-tuning-classification-example">Fine tuning classification example<a href="http://localhost:8889/lab/tree/examples/ss_Fine-tuned_classification.ipynb#Fine-tuning-classification-example"></a></h2>
+
+<p>We will fine-tune an ada classifier to distinguish between the two sports: Baseball and Hockey.</p>
+<h2 class="mume-header" id="get-embeddingshttplocalhost8889labtreeexamplesss_get_embeddingsipynbget-embeddings">Get embeddings<a href="http://localhost:8889/lab/tree/examples/ss_Get_embeddings.ipynb#Get-embeddings"></a></h2>
+
+<p>The function&#xA0;<code>get_embedding</code>&#xA0;will give us an embedding for an input text.</p>
+<h2 class="mume-header" id="how-to-handle-rate-limitshttplocalhost8889labtreeexamplesss_how_to_handle_rate_limitsipynbhow-to-handle-rate-limits">How to handle rate limits<a href="http://localhost:8889/lab/tree/examples/ss_How_to_handle_rate_limits.ipynb#How-to-handle-rate-limits"></a></h2>
+
+<p>When you call the OpenAI API repeatedly, you may encounter error messages that say&#xA0;<code>429: &apos;Too Many Requests&apos;</code>&#xA0;or&#xA0;<code>RateLimitError</code>. These error messages come from exceeding the API&apos;s rate limits.</p>
+<p>Rate limits are a common practice for APIs, and they&apos;re put in place for a few different reasons.</p>
+<ul>
+<li>First, they help protect against abuse or misuse of the API. For example, a malicious actor could flood the API with requests in an attempt to overload it or cause disruptions in service. By setting rate limits, OpenAI can prevent this kind of activity.</li>
+<li>Second, rate limits help ensure that everyone has fair access to the API. If one person or organization makes an excessive number of requests, it could bog down the API for everyone else. By throttling the number of requests that a single user can make, OpenAI ensures that everyone has an opportunity to use the API without experiencing slowdowns.</li>
+<li>Lastly, rate limits can help OpenAI manage the aggregate load on its infrastructure. If requests to the API increase dramatically, it could tax the servers and cause performance issues. By setting rate limits, OpenAI can help maintain a smooth and consistent experience for all users.</li>
+</ul>
+<p>Although hitting rate limits can be frustrating, rate limits exist to protect the reliable operation of the API for its users.</p>
+<p>In this guide, we&apos;ll share some tips for avoiding and handling rate limit errors.</p>
+<h1 class="mume-header" id="how-to-stream-completionshttplocalhost8889labtreeexamplesss_how_to_stream_completionsipynbhow-to-stream-completions">How to stream completions<a href="http://localhost:8889/lab/tree/examples/ss_How_to_stream_completions.ipynb#How-to-stream-completions"></a></h1>
+
+<p>By default, when you send a prompt to the OpenAI Completions endpoint, it computes the entire completion and sends it back in a single response.</p>
+<p>If you&apos;re generating very long completions from a davinci-level model, waiting for the response can take many seconds. As of Aug 2022, responses from&#xA0;<code>text-davinci-002</code>&#xA0;typically take something like ~1 second plus ~2 seconds per 100 completion tokens.</p>
+<p>If you want to get the response faster, you can &apos;stream&apos; the completion as it&apos;s being generated. This allows you to start printing or otherwise processing the beginning of the completion before the entire completion is finished.</p>
+<p>To stream completions, set&#xA0;<code>stream=True</code>&#xA0;when calling the Completions endpoint. This will return an object that streams back text as&#xA0;<a href="https://app.mode.com/openai/reports/4fce5ba22b5b/runs/f518a0be4495">data-only server-sent events</a>.</p>
+<p>Note that using&#xA0;<code>stream=True</code>&#xA0;in a production application makes it more difficult to moderate the content of the completions, which has implications for&#xA0;<a href="https://beta.openai.com/docs/usage-guidelines">approved usage</a>.</p>
+<p>Below is a Python code example of how to receive streaming completions.</p>
+<h1 class="mume-header" id="multiclass-classification-for-transactionshttplocalhost8889labtreeexamplesss_multiclass_classification_for_transactionsipynbmulticlass-classification-for-transactions">Multiclass Classification for Transactions<a href="http://localhost:8889/lab/tree/examples/ss_Multiclass_classification_for_transactions.ipynb#Multiclass-Classification-for-Transactions"></a></h1>
+
+<p>For this notebook we will be looking to classify a public dataset of transactions into a number of categories that we have predefined. These approaches should be replicable to any multiclass classificaiton use case where we are trying to fit transactional data into predefined categories, and by the end of running through this you should have a few approaches for dealing with both labelled and unlabelled datasets.</p>
+<p>The different approaches we&apos;ll be taking in this notebook are:</p>
+<ul>
+<li><strong>Zero-shot Classification:</strong>&#xA0;First we&apos;ll do zero shot classification to put transactions in one of five named buckets using only a prompt for guidance</li>
+<li><strong>Classification with Embeddings:</strong>&#xA0;Following this we&apos;ll create embeddings on a labelled dataset, and then use a traditional classification model to test their effectiveness at identifying our categories</li>
+<li><strong>Fine-tuned Classification:</strong>&#xA0;Lastly we&apos;ll produce a fine-tuned model trained on our labelled dataset to see how this compares to the zero-shot and few-shot classification approaches</li>
+</ul>
+<h2 class="mume-header" id="question-answering-using-embeddingshttplocalhost8889labtreeexamplesss_question_answering_using_embeddingsipynbquestion-answering-using-embeddings">Question Answering using Embeddings<a href="http://localhost:8889/lab/tree/examples/ss_Question_answering_using_embeddings.ipynb#Question-Answering-using-Embeddings"></a></h2>
+
+<p>Many use cases require GPT-3 to respond to user questions with insightful answers. For example, a customer support chatbot may need to provide answers to common questions. The GPT models have picked up a lot of general knowledge in training, but we often need to ingest and use a large library of more specific information.</p>
+<p>In this notebook we will demonstrate a method for enabling GPT-3 able to answer questions using a library of text as a reference, by using document embeddings and retrieval. We&apos;ll be using a dataset of Wikipedia articles about the 2020 Summer Olympic Games. Please see&#xA0;<a href="http://localhost:8889/files/examples/fine-tuned_qa/olympics-1-collect-data.ipynb?_xsrf=2%7C0dcdb1d6%7Cd5ea44109a990393d4f42738c3ac89f1%7C1669661431">this notebook</a>&#xA0;to follow the data gathering process.</p>
+<h2 class="mume-header" id="recommendation-using-embeddings-and-nearest-neighbor-searchhttplocalhost8889labtreeexamplesss_recommendation_using_embeddingsipynbrecommendation-using-embeddings-and-nearest-neighbor-search">Recommendation using embeddings and nearest neighbor search<a href="http://localhost:8889/lab/tree/examples/ss_Recommendation_using_embeddings.ipynb#Recommendation-using-embeddings-and-nearest-neighbor-search"></a></h2>
+
+<p>Recommendations are widespread across the web.</p>
+<ul>
+<li>&apos;Bought that item? Try these similar items.&apos;</li>
+<li>&apos;Enjoy that book? Try these similar titles.&apos;</li>
+<li>&apos;Not the help page you were looking for? Try these similar pages.&apos;</li>
+</ul>
+<p>This notebook demonstrates how to use embeddings to find similar items to recommend. In particular, we use&#xA0;<a href="http://groups.di.unipi.it/~gulli/AG_corpus_of_news_articles.html">AG&apos;s corpus of news articles</a>&#xA0;as our dataset.</p>
+<p>Our model will answer the question: given an article, what other articles are most similar to it?</p>
+<h2 class="mume-header" id="regression-using-the-embeddingshttplocalhost8889labtreeexamplesss_regression_using_embeddingsipynbregression-using-the-embeddings">Regression using the embeddings<a href="http://localhost:8889/lab/tree/examples/ss_Regression_using_embeddings.ipynb#Regression-using-the-embeddings"></a></h2>
+
+<p>Regression means predicting a number, rather than one of the categories. We will predict the score based on the embedding of the review&apos;s text. We split the dataset into a training and a testing set for all of the following tasks, so we can realistically evaluate performance on unseen data. The dataset is created in the&#xA0;<a href="http://localhost:8889/files/examples/Obtain_dataset.ipynb?_xsrf=2%7C0dcdb1d6%7Cd5ea44109a990393d4f42738c3ac89f1%7C1669661431">Obtain_dataset Notebook</a>.</p>
+<p>We&apos;re predicting the score of the review, which is a number between 1 and 5 (1-star being negative and 5-star positive).</p>
+<h2 class="mume-header" id="semantic-text-search-using-embeddingshttplocalhost8889labtreeexamplesss_semantic_text_search_using_embeddingsipynbsemantic-text-search-using-embeddings">Semantic text search using embeddings<a href="http://localhost:8889/lab/tree/examples/ss_Semantic_text_search_using_embeddings.ipynb#Semantic-text-search-using-embeddings"></a></h2>
+
+<p>We can search through all our reviews semantically in a very efficient manner and at very low cost, by simply embedding our search query, and then finding the most similar reviews. The dataset is created in the&#xA0;<a href="http://localhost:8889/files/examples/Obtain_dataset.ipynb?_xsrf=2%7C0dcdb1d6%7Cd5ea44109a990393d4f42738c3ac89f1%7C1669661431">Obtain_dataset Notebook</a>.</p>
+<p>[1]:</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
